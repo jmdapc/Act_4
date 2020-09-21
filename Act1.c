@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include "personaje.h"
 
 void c_enteros(){
     int enteros[5];
@@ -54,8 +55,11 @@ int main(){
             mostrar(n,cadena);
             break;   
         case '3':
+            c_persona();
             break;
         case '4':
+            m_personajes();
+            break;
         default:
             break;
         }
