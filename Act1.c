@@ -19,8 +19,14 @@ void c_enteros(){
     printf("La suma es: %i\n",sum);
     //El promedio
     printf("El promedio es: %f",sum/5.0);
-
 }
+
+void mostrar(int n, char cadena[]){
+    for(size_t i=0;i<n;i++){
+        printf("%s",cadena);
+    }
+}
+
 int main(){
     char op;
     char cadena[20];
@@ -40,6 +46,12 @@ int main(){
             c_enteros();
             break;
         case '2':
+            printf("Escribe una cadena de 20 o menos caracteres\n");
+            fflush(stdin);
+            fgets(cadena,sizeof(cadena),stdin);
+            printf("n: ");
+            scanf("%i",&n);
+            mostrar(n,cadena);
             break;   
         case '3':
             break;
